@@ -57,3 +57,7 @@ class BasePage():
         except TimeoutException:
             return False
         return True
+
+    def go_to_cart(self):
+        link = self.browser.find_element(*BasePageLocators.CART_LINK)
+        link.click()
